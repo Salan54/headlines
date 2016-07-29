@@ -42,6 +42,7 @@ def home():
     rate, currencies = get_rate(currency_from, currency_to)
     
     response = make_response(render_template("home.html",
+                titre=publication.upper(),
                 articles=articles,
                 weather=weather,
                 currency_from=currency_from,
